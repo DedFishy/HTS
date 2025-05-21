@@ -2,8 +2,33 @@
 <html>
   <head>
     <title>HTS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header">
+      <h1 id="mark">HTS</h1>
+    </div>
+
+    <div id="editor">
+      <div id="file-pane">
+
+      </div>
+      <div id="ace-pane">
+        function hello() {
+          console.log('hello');
+        }
+      </div>
+      <div id="view-pane">
+
+      </div>
+    </div>
+
+    <script src="/ace-builds-1.5.0/ace-builds-1.5.0/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("ace-pane");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/javascript");
+    </script>
   </body>
 </html>
